@@ -1,5 +1,5 @@
 # GPT Docs Connect
-Connects Google Docs to GPT3, it requires you to have an API Key for GPT-3.
+Connects Google Docs to GPT3, it requires you to have an API Key for GPT-3. It currently pastes the response at the end of the document.
 
 ## Instructions
 1. Navigate to "extensions" on google docs 
