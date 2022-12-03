@@ -1,7 +1,7 @@
 # GPT Docs Connect
 Connects Google Docs to GPT3.
 
-##Instructions
+## Instructions
 1. Navigate to "extensions" on google docs 
 2. Click Apps Script
 3. Add new Script File
