@@ -1,5 +1,6 @@
 // Create Menu
 var body = DocumentApp.getActiveDocument().getBody();
+var paragraphs = body.getParagraphs();
 
 var maxTokens = PropertiesService.getScriptProperties().getProperty('maxTokens');
 
@@ -58,7 +59,20 @@ function runFullDoc(){
 
 function runSelected(){
   var selectedText = getSelection();
-  runGPT(selectedText);
+  var response = runGPT(selectedText);
+  insertText(selectedText, response);
+}
+
+function insertText(find, insert){
+  for (let i = 0; i < paragraphs.length; i++) {
+    var text = paragraphs[i].getText();
+        
+    if (text.includes(find)==true) 
+    
+    {
+      body.insertParagraph(i, insert)
+     }
+ }
 }
 
 // Connect to GPT3
@@ -94,9 +108,7 @@ function runGPT(content) {
   var response = UrlFetchApp.fetch(url, options);
   var parse = JSON.parse(response);
   console.log(parse);
-  for(let i = 0; i < parse.choices.length;i++){
-    text.appendText(parse.choices[i].text);
-  }
+  return parse.choices[0].text;
 }
 
 function getSelection() {
