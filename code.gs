@@ -70,7 +70,7 @@ function insertText(find, insert){
     if (text.includes(find)==true) 
     
     {
-      body.insertParagraph(i, insert)
+      body.insertParagraph(i+1, insert)
      }
  }
 }
