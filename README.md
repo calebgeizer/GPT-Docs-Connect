@@ -8,4 +8,4 @@ Connects Google Docs to GPT3, it requires you to have an API Key for GPT-3.
 4. Paste the code
 5. Go to console.cloud.google.com
 6. Create a project and authenticate credentials
-5. Create a new deployment as an Add-On type.
+7. Create a new deployment as an Add-On type.
